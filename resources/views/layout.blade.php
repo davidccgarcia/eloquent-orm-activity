@@ -53,7 +53,16 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  Users <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{ route('users') }}">All</a></li>
+                  <li><a href="{{ route('users.female') }}">Female</a></li>
+                  <li><a href="{{ route('users.male') }}">Male</a></li>
+                </ul>
+              </li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
               <li class="dropdown">

@@ -1,7 +1,5 @@
 <?php
 
-use App\User;
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -25,11 +23,20 @@ Route::get('users/create', function () {
     ]);
 });
 
-Route::get('users', function () {
-    $users = User::all();
+Route::get('users', [
+    'as' => 'users', 
+    'uses' => 'UsersController@index'
+]);
 
-    return view('users.list', compact('users'));
-});
+Route::get('users/female', [
+    'as' => 'users.female', 
+    'uses' => 'UsersController@female'
+]);
+
+Route::get('users/male', [
+    'as' => 'users.male', 
+    'uses' => 'UsersController@male'
+]);
 
 Route::get('users/update', function () {
     $user = User::findOrFail(2);
