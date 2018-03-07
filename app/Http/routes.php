@@ -28,11 +28,7 @@ Route::get('users/create', function () {
 Route::get('users', function () {
     $users = User::all();
 
-    echo "<ul>";
-    foreach ($users as $user) {
-        echo "<li>" . $user->name . "</li>";
-    }
-    echo "</ul>";
+    return view('users.list', compact('users'));
 });
 
 Route::get('users/update', function () {
