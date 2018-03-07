@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -15,17 +17,32 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('users', function () {
-    $user = App\User::create([
+Route::get('users/create', function () {
+    $user = User::create([
         'name' => 'David García', 'email' => 'ccristhiangarcia@gmail.com', 
         'password' => bcrypt('secret'), 'gender' => 'f', 
         'biography' => 'Professor'
     ]);
 });
 
+Route::get('users', function () {
+    $users = User::all();
+
+    echo "<ul>";
+    foreach ($users as $user) {
+        echo "<li>" . $user->name . "</li>";
+    }
+    echo "</ul>";
+});
+
 Route::get('users/update', function () {
-    $user = App\User::findOrFail(1);
+    $user = User::findOrFail(2);
     $user->gender = 'm';
     $user->biography = 'Estudiante';
     $user->save();
+});
+
+Route::get('users/delete', function () {
+    $user = User::findOrFail(1);
+    $user->delete();
 });
