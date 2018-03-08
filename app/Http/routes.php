@@ -58,6 +58,11 @@ Route::get('query/list', [
     'uses' => 'QueryController@list'
 ]);
 
+Route::get('query/first', [
+    'as' => 'query.first', 
+    'uses' => 'QueryController@first'
+]);
+
 Route::get('users/update', function () {
     $user = User::findOrFail(2);
     $user->gender = 'm';

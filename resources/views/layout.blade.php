@@ -71,6 +71,7 @@
                   <li><a href="{{ route('query.get') }}">Get</a></li>
                   <li><a href="{{ route('query.orderby') }}">OrderBy || Take</a></li>
                   <li><a href="{{ route('query.list') }}">Lists</a></li>
+                  <li><a href="{{ route('query.first') }}">First</a></li>
                 </ul>
               </li>
 

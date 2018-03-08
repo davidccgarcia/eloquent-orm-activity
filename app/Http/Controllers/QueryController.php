@@ -35,4 +35,11 @@ class QueryController extends Controller
 
         dd($users);
     }
+
+    public function first()
+    {
+        $user = User::first();
+
+        dd($user->name);
+    }
 }
