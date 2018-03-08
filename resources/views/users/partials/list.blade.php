@@ -26,5 +26,7 @@
             </td>
         </tr>
         @endforeach
+
     </tbody>
 </table>
+{!! $users->render() !!}
