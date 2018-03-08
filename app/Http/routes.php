@@ -63,6 +63,11 @@ Route::get('query/first', [
     'uses' => 'QueryController@first'
 ]);
 
+Route::get('query/last', [
+    'as' => 'query.last', 
+    'uses' => 'QueryController@last'
+]);
+
 Route::get('users/update', function () {
     $user = User::findOrFail(2);
     $user->gender = 'm';

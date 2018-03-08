@@ -42,4 +42,12 @@ class QueryController extends Controller
 
         dd($user->name);
     }
+
+    public function last()
+    {
+        $users = User::all();
+        $last = $users->last();
+
+        dd($last->name);
+    }
 }
