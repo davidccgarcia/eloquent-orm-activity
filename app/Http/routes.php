@@ -38,6 +38,16 @@ Route::get('users/male', [
     'uses' => 'UsersController@male'
 ]);
 
+Route::get('query/get', [
+    'as' => 'query.get', 
+    'uses' => 'QueryController@get'
+]);
+
+Route::get('query/orderby/take', [
+    'as' => 'query.orderby', 
+    'uses' => 'QueryController@orderby'
+]);
+
 Route::get('users/update', function () {
     $user = User::findOrFail(2);
     $user->gender = 'm';

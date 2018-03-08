@@ -63,7 +63,16 @@
                   <li><a href="{{ route('users.male') }}">Male</a></li>
                 </ul>
               </li>
-              <li><a href="#">About</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  Query <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{ route('query.get') }}">Get</a></li>
+                  <li><a href="{{ route('query.orderby') }}">OrderBy || Take</a></li>
+                </ul>
+              </li>
+
               <li><a href="#">Contact</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
