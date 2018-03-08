@@ -38,6 +38,11 @@ Route::get('users/male', [
     'uses' => 'UsersController@male'
 ]);
 
+Route::delete('users/delete/{id}', [
+    'as' => 'users.delete', 
+    'uses' => 'UsersController@destroy'
+]);
+
 Route::get('query/get', [
     'as' => 'query.get', 
     'uses' => 'QueryController@get'
