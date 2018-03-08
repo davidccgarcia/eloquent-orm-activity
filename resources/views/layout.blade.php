@@ -70,6 +70,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="{{ route('query.get') }}">Get</a></li>
                   <li><a href="{{ route('query.orderby') }}">OrderBy || Take</a></li>
+                  <li><a href="{{ route('query.list') }}">Lists</a></li>
                 </ul>
               </li>
 

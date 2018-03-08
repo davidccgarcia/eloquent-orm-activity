@@ -53,6 +53,11 @@ Route::get('query/orderby/take', [
     'uses' => 'QueryController@orderby'
 ]);
 
+Route::get('query/list', [
+    'as' => 'query.list', 
+    'uses' => 'QueryController@list'
+]);
+
 Route::get('users/update', function () {
     $user = User::findOrFail(2);
     $user->gender = 'm';

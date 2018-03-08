@@ -27,4 +27,12 @@ class QueryController extends Controller
 
         return view('users.index', compact('users'));
     }
+
+    public function list()
+    {
+        $users = User::orderBy('name', 'ASC')
+            ->lists('name', 'id');
+
+        dd($users);
+    }
 }
